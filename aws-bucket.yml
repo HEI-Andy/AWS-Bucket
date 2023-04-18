@@ -11,7 +11,7 @@ Resources:
       BucketName: "STD21089"
 
 
-  MonParametreSSM:
+  MySSMParameter:
     Type: "AWS::SSM::Parameter"
     Properties:
       Name: "/mon-bucket-s3/nom"
@@ -19,10 +19,10 @@ Resources:
       Type: "String"
       Value: !Ref "bucketS3"
 
-  MonParametreSSMArn:
+  MySSMArnParameter:
     Type: "AWS::SSM::Parameter"
     Properties:
-      Name: "/mon-bucket-s3/arn"
+      Name: "/my-bucket-s3/arn"
       Description: "ARN du bucket S3 créé"
       Type: "String"
       Value: !GetAt "BucketS3.Arn"
