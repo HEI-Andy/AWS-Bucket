@@ -1,5 +1,3 @@
-Description: storage stack test
-
 Resources:
   MonBucketS3:
     Type: "AWS::S3::Bucket"
