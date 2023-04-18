@@ -17,7 +17,7 @@ Resources:
       Name: "/mon-bucket-s3/nom"
       Description: "Nom du bucket S3 créé"
       Type: "String"
-      Value: !Ref "bucketS3"
+      Value: !Ref bucketS3
 
   MySSMArnParameter:
     Type: "AWS::SSM::Parameter"
@@ -25,4 +25,4 @@ Resources:
       Name: "/my-bucket-s3/arn"
       Description: "ARN du bucket S3 créé"
       Type: "String"
-      Value: !GetAt "BucketS3.Arn"
+      Value: !GetAtt BucketS3.Arn
