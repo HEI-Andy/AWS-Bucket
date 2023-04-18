@@ -1,5 +1,28 @@
+Parameters:
+  BucketNameParameter:
+    Type: String
+    Default: "mon-bucket-s3"
+    Description: "Nom du bucket S3 à créer"
+
 Resources:
   MonBucketS3:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: "my-bucket-s3"
+      BucketName: "STD21089"
+
+
+  MonParametreSSM:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: "/mon-bucket-s3/nom"
+      Description: "Nom du bucket S3 créé"
+      Type: "String"
+      Value: !Ref "bucketS3"
+
+  MonParametreSSMArn:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: "/mon-bucket-s3/arn"
+      Description: "ARN du bucket S3 créé"
+      Type: "String"
+      Value: !GetAt "BucketS3.Arn"
