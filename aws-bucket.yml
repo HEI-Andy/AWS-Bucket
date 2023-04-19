@@ -14,7 +14,7 @@ Resources:
   MySSMParameter:
     Type: "AWS::SSM::Parameter"
     Properties:
-      Name: "/mon-bucket-s3/nom"
+      Name: "/my-bucket-s3/name"
       Description: "Nom du bucket S3 créé"
       Type: "String"
       Value: !Ref bucketS3
