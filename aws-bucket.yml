@@ -2,7 +2,7 @@ Parameters:
   BucketNameParameter:
     Type: String
     Default: "my-bucket-s3"
-    Description: "Nom du bucket S3 à créer"
+    Description: "Creation of bucket S3"
 
 Resources:
   MonBucketS3:
