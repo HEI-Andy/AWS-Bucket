@@ -8,7 +8,7 @@ Resources:
   MonBucketS3:
     Type: "AWS::S3::Bucket"
     Properties:
-      BucketName: "STD21089"
+      BucketName: "Bucket-STD21089"
 
   MySSMParameter:
     Type: "AWS::SSM::Parameter"
