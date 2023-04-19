@@ -10,7 +10,6 @@ Resources:
     Properties:
       BucketName: "STD21089"
 
-
   MySSMParameter:
     Type: "AWS::SSM::Parameter"
     Properties:
